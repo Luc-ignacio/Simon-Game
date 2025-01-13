@@ -85,7 +85,7 @@ $(document).keydown(function() {
     }
 })
 
-$(document).click(function() {
+$(body).click(function() {
     if (started === false) {
         nextSequence();
         started = true;
