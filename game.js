@@ -85,7 +85,7 @@ $(document).keydown(function() {
     }
 })
 
-$("body").click(function() {
+$("body").touchstart(function() {
     if (started === false) {
         nextSequence();
         started = true;
