@@ -80,6 +80,9 @@ var started = false;
 
 $(document).on("keydown touchstart", function() {
     if (started === false) {
+        if (event.type === "touchstart") {
+            event.preventDefault();
+        }
         nextSequence();
         started = true;
     }
