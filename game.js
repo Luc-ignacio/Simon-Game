@@ -78,15 +78,20 @@ $(".btn").click(function() {
 
 var started = false;
 
-$(document).on("keydown touchstart", function() {
-    if (started === false) {
-        if (event.type === "touchstart") {
-            event.preventDefault();
-        }
-        nextSequence();
-        started = true;
-    }
-})
+// $(document).on("keydown touchstart", function() {
+//     if (started === false) {
+//         if (event.type === "touchstart") {
+//             event.preventDefault();
+//         }
+//         nextSequence();
+//         started = true;
+//     }
+// })
+
+$(document).on("touchstart", function() {
+    console.log("Touch detected!");
+    console.log(event.type);
+});
 
 function checkAnswer(currentLevel) {
     console.log(currentLevel);
