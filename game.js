@@ -85,7 +85,7 @@ $(document).keydown(function() {
     }
 })
 
-$(document).touch(function() {
+$(document).tap(function() {
     if (started === false) {
         nextSequence();
         started = true;
