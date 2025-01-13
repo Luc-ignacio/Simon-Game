@@ -85,6 +85,12 @@ $(document).keydown(function() {
     }
 })
 
+$(document).touch(function() {
+    if (started === false) {
+        nextSequence();
+        started = true;
+    }
+})
 
 function checkAnswer(currentLevel) {
     console.log(currentLevel);
