@@ -78,10 +78,12 @@ $(".btn").click(function() {
 
 var started = false;
 
-$(document).on("touchstart", function() {
-    console.log("Touch detected!");
-    console.log(event.type);
-});
+$("body").on("keydown touchstart click", function() {
+    if (started === false) {
+        nextSequence();
+        started = true;
+    }
+})
 
 function checkAnswer(currentLevel) {
     console.log(currentLevel);
