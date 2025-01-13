@@ -78,7 +78,7 @@ $(".btn").click(function() {
 
 var started = false;
 
-$("body").on("keydown touchstart click", function() {
+$("document").on("keydown touchstart click", function() {
     if (started === false) {
         nextSequence();
         started = true;
